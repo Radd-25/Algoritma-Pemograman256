@@ -28,11 +28,11 @@ public class InputStruk {
 
         System.out.println("===== STRUK PEMBELIAN =====");
         System.out.println("Nama Barang   : Rp" + nama);
-        System.out.println("Harga Satuan : Rp" + harga);
-        System.out.println("Jumlah Beli : Rp" + jumlah);
+        System.out.println("Harga Satuan  : Rp" + harga);
+        System.out.println("Jumlah Beli   : Rp" + jumlah);
         System.out.println("Total Harga   : Rp" + total);
         System.out.println("Diskon        : Rp" + diskon);
-        System.out.println("Total Bayar  : Rp" + total_bayar);
+        System.out.println("Total Bayar   : Rp" + total_bayar);
         System.out.println("===========================");
 
 
