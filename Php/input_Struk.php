@@ -21,3 +21,4 @@ echo"Total Harga   : Rp", $total, "\n";
 echo"Diskon        : Rp", $diskon, "\n";
 echo"Total Bayar   : Rp", $total_bayar, "\n";
 echo"===========================";
+?>
