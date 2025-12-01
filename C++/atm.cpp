@@ -33,7 +33,7 @@ do {
     
     system("cls");
     cout << endl;
-    cout << "Menu ATM" << endl;
+    cout << "=== Menu ATM ===" << endl;
     cout << "1. Cek saldo" << endl;
     cout << "2. Tarik tunai" << endl;
     cout << "3. Setor tunai" << endl;
