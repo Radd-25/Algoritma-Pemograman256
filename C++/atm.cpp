@@ -5,18 +5,20 @@ using namespace std;
 
 int main(){
     int saldo = 0;
-    string nama = "";
+    string nama;
     bool check = false;
     int menu = 0;
 
 do {
         cout << "Masukan Nama Anda : ";
-        cin >> nama;
+        getline(cin, nama);
+        system("cls");
 
-        cout << "apakah nama anda benar? " << nama << " (1 untuk benar, 0 untuk salah) : ";
+        cout << "Apakah nama anda benar? " << nama << " (1 untuk benar, 0 untuk salah) : ";
         cin >> check;
 
         if (check == 1) {
+            system("cls");
             cout << "Selamat datang " << nama << endl;
             cout << "Masukan Saldo awal anda (hanya angka): ";
             cin >> saldo;
@@ -28,6 +30,7 @@ do {
             
         }
     } while (check != 1);
+    
     system("cls");
     cout << endl;
     cout << "Menu ATM" << endl;
@@ -52,22 +55,28 @@ do {
         cout << "Masukan jumlah uang yang ingin ditarik : Rp ";
         cin >> tarik;
 
+        system("cls");
+
         cout << "Anda akan menarik saldo sebesar Rp " << tarik << endl << "1 untuk benar, 0 untuk salah ";
         cin >> check;
         if (check == 1)
         {
             if (tarik > saldo)
             {
+                system("cls");
                 cout << "Maaf saldo anda tidak mencukupi" << endl;
             }
             else
             {
                 saldo = saldo - tarik;
-                cout << "Transaksi berhasil. Saldo anda saat ini adalah Rp" << saldo << endl;
+                system("cls");
+                cout << "Transaksi berhasil." << endl;
+                cout << "Saldo anda saat ini adalah Rp" << saldo << endl;
             }
         }
         else
         {
+            system("cls");
             cout << "Transaksi dibatalkan" << endl;
         }
         break;}
@@ -77,7 +86,9 @@ do {
         cout << "Masukan jumlah uang yang ingin disetor : Rp ";
         cin >> setor;
         saldo = saldo + setor;
-        cout << "Transaksi berhasil. Saldo anda saat ini adalah Rp" << saldo << endl;
+        system("cls");
+        cout << "Transaksi berhasil." << endl;
+        cout << "Saldo anda saat ini adalah Rp" << saldo << endl;
         break;}
 
     case 4:
@@ -89,22 +100,40 @@ do {
         cin >> transfer;
         if (transfer > saldo)
         {
+            system("cls");
             cout << "Maaf saldo anda tidak mencukupi" << endl;
         }
         else
         {
-            saldo = saldo - transfer;
-            cout << "Transaksi berhasil. Saldo anda saat ini adalah Rp" << saldo << endl;
+            system("cls");
+            cout << "Anda akan mentransfer saldo sebesar Rp " << transfer << " ke rekening " << rek << endl;
+            cout << "1 untuk benar, 0 untuk salah ";
+            cin >> check;
+            if (check == 1)
+            {
+                saldo = saldo - transfer;
+                system("cls");
+                cout << "Transaksi berhasil." << endl;
+                cout << "Saldo anda saat ini adalah Rp" << saldo << endl;
+            }
+            else
+            {
+                system("cls");
+                cout << "Transaksi dibatalkan" << endl;
+            }
         }
         break;}
 
     case 5:
-       { cout << "Sampai jumpa lagi" << endl;
+    
+       { system("cls");
+        cout << "Sampai jumpa lagi" << endl;
         break;}
 
 
     default:
-       { cout << "Menu tidak tersedia" << endl;
+       { system("cls");
+        cout << "Menu tidak tersedia" << endl;
         break;}
     }
 
